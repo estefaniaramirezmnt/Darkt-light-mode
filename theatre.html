@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎭 Theatre: a passion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: Quicksand, Arial, Helvetica, sans-serif;
+            background: linear-gradient(90deg, rgb(30, 32, 34) 47%, rgb(82, 97, 107) 100%, rgb(82, 97, 107) 100%);
+            margin: auto;
+            max-width: max-content;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: 222831;
+            border-radius: 20px;
+            margin: 60px;
+            padding: 20px;
+            background-color: rgba(240, 245, 249, 0.05);
+        }
+
+        header {
+            text-align: center;
+            color: #f7f7f7;
+        }
+
+        h1 {
+            font-size: 3em;
+            background-color: rgba(0, 173, 181, 0.1);
+            font-weight: 700;
+            text-align: center;
+            padding: 15px 15px;
+            margin: auto;
+            margin-top: 15px;
+        }
+
+        main {
+            text-align: justify;
+            color: #f7f7f7;
+            font-size: x-large;
+            font-weight: 500;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        img {
+            border-radius: 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .img-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .second-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .img-container img,
+        .second-container img {
+            width: 100%;
+        }
+
+        .first-picture {
+            transition: all 300ms ease-in-out;
+        }
+
+        .first-picture:hover {
+            transform: scale(1.2);
+        }
+
+        .second-picture {
+            transition: transform 500ms ease-in-out, filter 2000ms ease-in;
+        }
+
+        .second-picture:hover {
+            transform: scale(2);
+            filter: contrast(80%);
+        }
+
+        .third-picture {
+            transition: all 500ms ease-in-out;
+        }
+
+        .third-picture:hover {
+            transform: scale(2);
+        }
+
+        .fourth-picture {
+            transition: all 600ms ease-in-out;
+        }
+
+        .fourth-picture:hover {
+            transform: scale(2);
+        }
+
+        a:link {
+            color: #f7f7f7;
+        }
+
+        a:hover {
+            color: #00ADB5;
+        }
+
+        a:visited {
+            color: #f7f7f7;
+        }
+
+        a:visited:hover {
+            color: #00ADB5;
+        }
+
+        hr {
+            border-color: #00ADB5;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+
+        }
+
+        button {
+            background-color: #00ADB5;
+            opacity: 0.7;
+            color: #c9d6df;
+            border-radius: 35px;
+            border: 1px solid #00ADB5;
+            box-shadow: 0px 2px 9px #52616b;
+            padding: 15px;
+            margin-bottom: 30px;
+            transition: all 200ms ease-in-out;
+            position: absolute;
+            top: 60px;
+            right: 40px;
+            z-index: 999;
+        }
+
+        button:hover {
+            background-color: #c9d6df;
+            color: #00ADB5;
+            border: 1px solid #c9d6df;
+            box-shadow: 0px 2px 9px #52616b;
+            cursor: grab;
+        }
+
+        footer {
+            text-align: center;
+            color: #f7f7f7;
+            font-size: large;
+        }
+
+        .light {
+            background: linear-gradient(90deg, rgb(247, 247, 247) 0%, rgb(146, 154, 171) 100%);
+            margin: auto;
+        }
+
+        .light .container {
+            background-color: rgba(238, 238, 238, 0.5);
+        }
+
+        .light header {
+            color: #393e46;
+        }
+
+        .light h1 {
+            background-color: rgba(0, 173, 181, 0.3);
+        }
+
+        .light main {
+            color: #393e46;
+        }
+
+        .light a:link {
+            color: #393e46;
+        }
+
+        .light a:hover {
+            color: #00ADB5;
+        }
+
+        .light a:visited {
+            color: #393e46;
+        }
+
+        .light a:visited:hover {
+            color: #00ADB5;
+        }
+
+        .light button {
+            background-color: #00ADB5;
+            color: #393e46;
+            border: 1px solid #00ADB5;
+            box-shadow: 0px 2px 9px #393e46;
+        }
+
+        .light button:hover {
+            background-color: #393e46;
+            color: #00ADB5;
+            border: 1px solid #393e46;
+        }
+
+        .light footer {
+            color: #393e46;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="button-container">
+            <button class="theme-button">Change theme</button>
+        </div>
+        <header>
+            <h1>Theatre: a passion</h1>
+            <h2>The hobby I love the most </h2>
+        </header>
+        <main>
+            <div class="img-container">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/922/original/theatre2.jpg?1694616391"
+                    class="first-picture" alt="Fuenteovejuna, First Act" width="240">
+            </div>
+            <div class="second-container">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/921/original/theatre.jpg?1694616384"
+                    class="second-picture" alt="Hipólito: Theseus and the nursemaid" width="300">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/923/original/theatre3.JPG?1694616397"
+                    class="third-picture" alt="Final scene of Hipólito" width="300">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/927/original/theatre4.JPG?1694616467"
+                    class="fourth-picture" alt="Actors greeting at the end of the show" width="300">
+            </div>
+
+            <div class="description-container">
+                <p>"Theatre or theater is a collaborative form of performing art that uses
+                    live performers, usually actors or actresses, to present the experience
+                    of a real or imagined event before a live audience in a specific place, often a stage.
+                    The performers may communicate this experience to the audience through
+                    combinations of gesture, speech, song, music, and dance."
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Theatre" target="_blank">➡ Read more on Wikipedia 🔍</a>
+                <hr />
+                <p>
+                    <em>For me</em> theatre is the most beautiful way to express feelings, and living a thousend lives.
+                    It's a way to learn about emotions, people, about yourself. It's a way to be free, to be someone
+                    else,
+                    <strong>to be</strong>.
+                </p>
+                <hr />
+            </div>
+        </main>
+        <footer>
+            <p>
+                This page was built by Nia Ramírez
+            </p>
+            <a href="https://www.instagram.com/niaramirez_/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/096/966/original/logoInstagram.png?1694626269"
+                    alt="instagram Logo" width="35">
+            </a>
+        </footer>
+
+    </div>
+
+    <script>
+
+        function changeTheme() {
+            let body = document.querySelector("body");
+            body.classList.toggle("light");
+        }
+
+        /* another way to do it:
+            let body = document.querySelector("body");
+
+            if (body.classList.contains("light")) {
+                body.classList.remove("light");
+            } else {
+                body.classList.add("light");
+            }
+        */
+
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+    </script>
+    </body>
+
+</html>
